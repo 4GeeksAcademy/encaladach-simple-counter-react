@@ -9,7 +9,7 @@ import "../styles/index.css";
 function SimpleCounter(props){
     return (<div className="bigCounter">
         <div className="calendar">
-        <i class="fa-regular fa-clock"></i>
+        <i class="fas fa-clock"></i>
         </div>
         <div className="four">{props.digitFour % 10}</div>
         <div className="three">{props.digitThree % 10}</div>
@@ -19,10 +19,10 @@ function SimpleCounter(props){
     </div>);
 }
 SimpleCounter.propTypes = {
-    digitFour: propTypes.number,
-    digitThree: propTypes.number,
-    digitTwo: propTypes.number,
-    digitOne: propTypes.number
+    digitFour: PropTypes.number,
+    digitThree: PropTypes.number,
+    digitTwo: PropTypes.number,
+    digitOne: PropTypes.number
 
 };
 
@@ -36,7 +36,7 @@ setInterval(function(){
 
     counter++;
 
-    ReactDom.render(
+    ReactDOM.render(
         <SimpleCounter digitOne={one} digitTwo={two} digitThree={three} digitFour={four} />,
         document.querySelector("#app")
     );   
